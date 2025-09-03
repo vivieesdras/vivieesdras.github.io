@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="assets/img/wedding.svg">
+    <title>Vivi & Esdras</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/components/section-inicio.css">
+    <link rel="stylesheet" href="css/components/section-cerimonia.css">
+    <link rel="stylesheet" href="css/components/main-menu.css">
+    <link rel="stylesheet" href="css/components/main-text.css">
+    <link rel="stylesheet" href="css/components/loader.css">
+    <link rel="stylesheet" href="css/components/section-celebração.css">
+    <link rel="stylesheet" href="css/components/confirmation.css">
+    <link rel="stylesheet" href="css/components/section-galeria.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/components/responsivo.css">
+    <link rel="stylesheet" href="css/components/menu-mobile.css">
+    <link rel="stylesheet" href="css/components/presentes.css">
+    <link rel="stylesheet" href="css/components/service-carousel.css">
+    <link rel="stylesheet" href="css/components/service-card.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Great+Vibes&family=Syne:wght@400..800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <script src="js/scroll-behavior.js"></script>
+    <script src="js/scroll-smooth.js"></script>
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+</head>
+
+<body>
+    <header>
+        <a href="#menu" class="open-menu"><span style="display: none;">Abrir menu</span></a>
+        <nav class="main-menu">
+            <a href="#inicio" class="main-button">INÍCIO</a>
+            <a href="#cerimonia" class="main-button">CERIMÔNIA</a>
+            <a href="#celebracao" class="main-button">CELEBRAÇÃO</a>
+            <a href="#galeria" class="main-button">GALERIA</a>
+            <a href="presente-item.html" class="main-button">PRESENTES</a>
+            <a href="#menu" class="close-menu">X</a>
+        </nav>
+
+    </header>
+    <section id="inicio" class="main-section -inicio position-fixed">
+
+        <div class="loader fade-in-up -first">
+            <h2 class="main-text">"Para que todos vejam e saibam, <br>
+                que a mão do Senhor fez isso, <br>
+                que o Santo de Israel o criou."</h2>
+            <p class="main-subtitle -loader">Isaias 41:20</p>
+        </div>
+        <h1 class="top-title">the wedding</h1>
+        <h1 class="main-title parallax-item -obj" data-speed="-0.7">viviane esdras</h1>
+        <img alt="vivi e esdras em desenho estilo ghibli" class="casal-ghibli" style="display: none;">
+        <div class="flowers">
+            <img alt="flores do lado esquerdo" class="flowers-left" style="display: none;">
+            <img alt="flores do lado direito" class="flowers-right" style="display: none;">
+        </div>
+
+        <div class="bg-image"></div>
+
+    </section>
+
+    <div class="site-content">
+
+    <div class="setinha"></div>
+        <section id="cerimonia" class="main-section -cerimonia">
+
+
+            <div class="main-text">
+                <b class="main-text -manuscript">Save the date</b>
+                <b class="main-text -date">25 <br> abr <br> 26 <br></b>
+                <i>A melhor forma de compartilhar esse momento com vocês é vivendo juntos esse sonho! </i> <br><br>
+                <a class="main-button -btn btnOpenModal" onclick="openModal()">
+                    <span class="top-key"></span>
+                    <span class="text">Confirmar Presença</span>
+                    <span class="bottom-key-1"></span>
+                    <span class="bottom-key-2"></span>
+                </a>
+
+                <form id="main-form" action="" method="post" class="confirmation">
+                    <a class="btnClose" onclick="closeModal()">X</a>
+                    <div class="title">Oba! Você vai!</div>
+                    <div class="subtitle">Pra confirmar, fala pra gente:</div>
+                    <div class="participante">
+                        <div class="input-container ic1">
+                            <input placeholder=" " type="text" class="input" name="nome" id="name" required>
+                            <div class="cut"></div>
+                            <label class="iLabel" for="name">Seu nome completo*</label>
+                        </div>
+
+                        <div class="input-container ic2">
+                            <input placeholder=" " type="text" class="input" name="whatsapp" id="whatsapp" required>
+                            <div class="cut cut-short"></div>
+                            <label class="iLabel" for="whatsapp">WhatsApp*</label>
+                        </div>
+                    </div>
+                    <button type="button" id="addParticipante" class="btnOK -add">+ Adicionar mais pessoa</button>
+                    <button class="btnOK" type="submit">Confirmado, estarei lá!</button>
+                </form>
+                <div id="feedback" class="feedback-message hidden">
+                    <p id="feedback-text"></p>
+                    <button onclick="closeFeedback()">Fechar</button>
+                </div>
+                <script>
+                    const btnAdd = document.getElementById("addParticipante");
+                    const form = document.getElementById("main-form");
+
+                    btnAdd.addEventListener("click", function () {
+                        // Seleciona o primeiro bloco de participante
+                        const participante = document.querySelector(".participante");
+
+                        // Clona o bloco inteiro
+                        const clone = participante.cloneNode(true);
+
+                        // Limpa os valores dos inputs clonados
+                        clone.querySelectorAll("input").forEach(input => input.value = "");
+
+                        // Insere o clone antes do botão de adicionar
+                        form.insertBefore(clone, btnAdd);
+                    });
+                </script>
+                <script>
+                    // Inicializa o EmailJS com a Public Key
+                    emailjs.init("kXD1_fUsp0saMMSPh"); // Substitua pela sua Public Key do EmailJS
+
+                    function showFeedback(message) {
+                        const box = document.getElementById("feedback");
+                        document.getElementById("feedback-text").textContent = message;
+                        box.classList.remove("hidden");
+                    }
+
+                    function closeFeedback() {
+                        document.getElementById("feedback").classList.add("hidden");
+                        document.getElementById("main-form").classList.remove("active");
+                    }
+
+                    // Adiciona evento ao formulário
+                    document.getElementById("main-form").addEventListener("submit", function (event) {
+                        event.preventDefault(); // Previne o recarregamento da página
+
+                        // Envia o e-mail usando EmailJS
+                        emailjs.sendForm("vivieesdras", "confirmationforms", this)
+                            .then(function () {
+                                showFeedback("Presença confirmada com sucesso!");
+                            }, function (error) {
+                                alert("Erro ao enviar a mensagem: " + error.text);
+                            });
+                    });
+                </script>
+
+
+                <img class="igrejaimg" src="assets/img/ChatGPT_Image_9_de_ago._de_2025__16_59_28-removebg-preview.png"
+                    alt="imagem da igreja">
+                <b>Cerimônia <br> 15:30 <br> </b>
+                Igreja Batista Renascença <br> Rua Taquari, 96 - Renascença, Belo Horizonte
+
+                <a href="https://ul.waze.com/ul?place=ChIJR9km8QyapgAR0paZLi-sLE4&ll=-19.89404270%2C-43.93722080&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+                    class="main-button -btn" style="margin-top: 10vw;">
+                    <span class="top-key"></span>
+                    <span class="text">Como chegar</span>
+                    <span class="bottom-key-1"></span>
+                    <span class="bottom-key-2"></span>
+                </a>
+            </div>
+            <div class="floating-photos">
+                <div class="floating-photo -first parallax-item -obj" data-speed="-0.7">
+
+                </div>
+                <div class="floating-photo -second parallax-item -obj" data-speed="3">
+
+                </div>
+                <div class="floating-photo -secondMobile parallax-item -obj" data-speed="0.4">
+
+                </div>
+                <div class="floating-photo -third parallax-item -obj" data-speed="0.2">
+
+                </div>
+            </div>
+        </section>
+
+        <section id="celebracao" class="main-section -celebracao">
+            <div class="momentos">
+                <div class="chegada">
+                    <p class="title">15:30</p>
+                    <p class="subtitle">Chegada</p>
+                    <p class="main-text">Seja pontual e aproveite esses minutinhos para encontrar os amigos, tirar fotos
+                        e se acomodar antes do início da cerimônia.</p>
+                </div>
+                <div class="culto">
+                    <p class="title">16:00</p>
+                    <p class="subtitle">Cerimônia</p>
+                    <p class="main-text">É hora de viver o momento mais esperado! Prepare o coração para celebrar o
+                        amor, adorar a Deus e se emocionar!</p>
+                </div>
+                <div class="recepcao">
+                    <p class="title">17:00</p>
+                    <p class="subtitle">Receptivo</p>
+                    <p class="main-text">Um momento especial para conversar, tirar fotos juntos, compartilhar sorrisos e
+                        guardar lembranças. Teremos também um mimo delicioso para adoçar a experiência</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" class="main-section -galeria">
+            <div class="capagaleria">
+                <h2 class="main-subtitle">Nossa <b class="-galeria-subtitle">Galeria</b></h2>
+            </div>
+            <div class="instagram-galery">
+                <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+                <script src="https://static.elfsight.com/platform/platform.js" async></script>
+                <div class="elfsight-app-b9679649-ada4-487c-b39b-46461e80c294" data-elfsight-app-lazy></div>
+            </div>
+        </section>
+
+
+    </div>
+
+    <script src="js/loading.js"></script>
+    <script src="js/inverted-parallax.js"></script>
+    <script src="js/menu-hidden.js"></script>
+    <script src="js/menu-mobile.js"></script>
+    <script src="js/confimation.js"></script>
+    <script src="js/service-carousel.js"></script>
+</body>
+
+</html>
