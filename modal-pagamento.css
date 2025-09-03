@@ -1,0 +1,68 @@
+.modal-pagamento {
+  background-color: white;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 20px;
+  width: 93vw;
+  max-height: 150vw;
+  position: fixed;
+  z-index: 999;
+  top: 100px;
+  left: 13px;
+  display: none;
+  overflow-y: auto;
+  text-align: right;
+  box-shadow: rgb(65, 65, 65) 1vw 1vw 5vw;
+}
+
+.active {
+    display: block;
+}
+
+.modal-pagamento .tipo-pagamento {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.tipo-pagamento .logo {
+    width: 25vw;
+    object-fit: contain;
+    object-position: center;
+} 
+
+.tipo-pagamento .pix {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: solid 1px #ededed;
+    border-radius: 2vw;
+    padding-bottom: 2vw;
+}
+
+.tipo-pagamento .pix .valor-pix {
+    font-size: 6vw;
+    margin: 3vw 0;
+}
+
+.tipo-pagamento .credito {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: solid 1px #ededed;
+    border-radius: 2vw;
+    align-items: center;
+    height: 25vw;
+}
+
+.tipo-pagamento .credito .logo.-credito {
+    opacity: 50%;
+}
+
+.tipo-pagamento a {
+    text-decoration: none;
+}
+
+.btnClose {
+    font-family: "Syne";
+}

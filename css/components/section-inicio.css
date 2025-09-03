@@ -1,0 +1,146 @@
+.-inicio {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.bg-image {
+    width: 100%;
+    height: 100%;
+    background-image: url(../../assets/img/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: transform 0.07s ease-out, opacity 0.07s ease-out;
+}
+
+.-inicio .top-title {
+    font-family: "Cormorant SC", serif;
+    font-size: 20vw;
+    color: white;
+    position: absolute;
+    top: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+    z-index: 1;
+    font-size: 9vw;
+    text-align: center;
+}
+
+.-inicio .top-title::before {
+    content: "";
+    width: 55vw;
+    border-bottom: solid 1px white;
+    position: absolute;
+    top: 0vw;
+} 
+
+.-inicio .top-title::after {
+    content: "";
+    width: 55vw;
+    border-bottom: solid 1px white;
+    position: absolute;
+    top: 10vw;
+}
+
+.-inicio .main-title {
+    color: white;
+    position: absolute;
+    top: 44vw;
+    display: inline-flex;
+    align-items: center;
+    gap: 70px;
+    z-index: 1;
+    font-size: 140px;
+    text-align: center;
+}
+
+.-inicio .main-title::before {
+    content: '&';
+    font-family: "Tangerine", cursive;
+    font-size: 15vw;
+    position: absolute;
+    transform: translateY(13vw);
+    opacity: 60%;
+}
+
+.-inicio .main-title .-syne {
+    font-size: 3.5vw;
+}
+/*
+.-inicio .casal-ghibli {
+    position: absolute;
+    bottom: -50px;
+    width: 770px;
+    z-index: 2;
+}
+
+.-inicio .flowers {
+    height: 100vh;
+    width: 99.8vw;
+    display: flex;
+    position: absolute;
+}
+
+.-inicio .flowers-left {
+    position: absolute;
+    z-index: 0;
+    left: -270px;
+    bottom: -444px;
+    transform: rotate(10deg) scale(1.17);
+}
+
+.-inicio .flowers-right {
+    position: absolute;
+    z-index: 0;
+    right: -240px;
+    bottom: -250px;
+    transform: rotate(-25deg) scale(1.2);
+}
+*/
+.main-menu {
+    transform: translateX(95vw);
+    transition: transform 1s ease-out;
+}
+
+.main-title {
+    transform: translateX(250vw);
+    transition: transform 1s ease-out;
+}
+
+.top-title {
+    transform: translateX(250vw);
+    transition: transform 1s ease-out;
+}
+/*
+.casal-ghibli {
+    transform: translateX(110vw);
+    transition: transform 1s ease-out;
+}
+
+.flowers {
+    transform: translateX(190vw);
+    transition: transform 1s ease-out;
+}
+*/
+.visible {
+    transform: translateX(0);
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.display-flex {
+    display: flex;
+}

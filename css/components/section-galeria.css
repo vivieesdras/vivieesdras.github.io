@@ -1,0 +1,49 @@
+.-galeria {
+    padding: 0 0;
+    background-color: #f5efeb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.-galeria .capagaleria {
+    height: 670px;
+    width: 100vw;
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 12%, rgba(0, 0, 0, 0.8) ), url(../../assets/img/42-DSC_8635\ 1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: ellipse(165% 99% at 50% 0%);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.-galeria .main-subtitle {
+    color: #ffffff;
+    margin-bottom: 60px;
+    position: absolute;
+    top: 29vh;
+    z-index: 3;
+    font-family: "Cormorant SC", serif;
+    font-size: 10vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.-galeria .main-subtitle .-galeria-subtitle {
+    font-size: 30vw;
+    margin-left: -25px;
+    line-height: 19vw;
+    font-family: "Great Vibes", cursive;
+    font-weight: 100;
+    color: #ffffff;
+}
+
+.-galeria .instagram-galery {
+    
+    width: 99vw;
+}

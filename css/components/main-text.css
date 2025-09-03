@@ -1,0 +1,35 @@
+.main-title {
+    font-family: "Cormorant SC", serif;
+}
+
+.-syne {
+    font-family: "Syne", sans-serif;
+}
+
+.main-subtitle {
+    font-family: "Syne", sans-serif;
+    font-size: 3vw;
+}
+
+.main-text {
+    font-family: "Syne", sans-serif;
+    font-size: 1.3vw;
+    color: rgb(85, 85, 85);
+}
+
+.-loader {
+    font-family: "Tangerine", cursive;
+}
+
+.main-text .-date {
+    font-weight: 800;
+    font-size: 1.8vw;
+    font-family: "Syne", sans-serif ;
+}
+
+.main-text .-manuscript {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-size: 4vw;
+}
+

@@ -1,0 +1,55 @@
+.main-menu {
+    display: flex;
+    justify-content: center;
+    gap: 3.5vw;
+    text-shadow: 2px 2px 2px #a4a4a4;
+}
+
+.main-button {
+    color: white;
+    font-size: 1.3vw;
+    font-weight: 500;
+    position: relative;
+    line-height: 60px;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.main-button:before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: center;
+    background: white;
+    transition: transform 0.25s ease-out;
+}
+
+.main-button:hover:before {
+    transform: scaleX(1);
+    width: 100%;
+    transform-origin: center;
+}
+
+.open-menu {
+    background-image:url(../../assets/img/menu.png);
+    filter: drop-shadow(2px 2px 2px #a4a4a4);
+    background-size: cover;
+    width: 7vw;
+    height: 7vw;
+    margin-right: 5vw;
+    background-repeat: no-repeat;
+}
+
+.close-menu {
+    color: white;
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 5vw;
+}
+
+.close-menu::before {
+    display: none;
+}

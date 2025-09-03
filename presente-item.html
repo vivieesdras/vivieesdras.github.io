@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="presente-item.css">
+    <link rel="stylesheet" href="modal-pagamento.css">
+    <link rel="stylesheet" href="/css/components/main-text.css">
+    <link rel="stylesheet" href="feedback-presente.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Great+Vibes&family=Syne:wght@400..800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <script src="js/scroll-behavior.js"></script>
+    <script src="js/scroll-smooth.js"></script>
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+</head>
+
+<body style="
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    background-color: #9fc089;
+">
+    <section class="presentes">
+        <div class="presentes-capa">
+        </div>
+        <h2 class="main-subtitle list-title">Para a Casa</h2>
+        <div class="wrap-presentes">
+
+            <article class="presente-item">
+                <img src="assets/img/carousel-galeria/julius" alt="">
+                <h3 class="main-subtitle">Primeira compra de supermercado</h3>
+                <h3 class="valor">R$250,00</h3>
+                <button>PRESENTEAR</button>
+                <div class="modal-pagamento">
+                    <a class="btnClose" onclick="closeModal()">X</a>
+                    <h3 class="title">Forma de pagamento</h3>
+                    <div class="tipo-pagamento">
+                        <article class="pix">
+                            <img class="logo -pix" src="assets/img/carousel-galeria/pix-banco-central-seeklogo.png"
+                                alt="logo pix">
+                            <div class="pix-info">
+                                <h3 class="valor-pix">R$250,00</h3>
+                                <button class="copiar-pix"
+                                    data-pix="00020126360014BR.GOV.BCB.PIX0114+55319863243045204000053039865406250.005802BR5918Esdras Alves Diniz6009SAO PAULO62140510w763YlWCpA6304A3CF">Copiar
+                                    código pix</button>
+                            </div>
+
+
+
+                        </article>
+                        <a href="https://pag.ae/7_-ZTYwg3" target="_blank">
+                            <article class="credito">
+                                <img class="logo -credito" src="assets/img/carousel-galeria/cartao-de-credito.png"
+                                    alt="logo credito">
+                                <h3>Cartão de crédito</h3>
+                            </article>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="presente-item">
+                <img src="assets/img/carousel-galeria/gatinho janta.png" alt="">
+                <h3 class="main-subtitle">Garanta o 1º mês de jantar do casal</h3>
+                <h3 class="valor">R$120,00</h3>
+                <button>PRESENTEAR</button>
+                <div class="modal-pagamento">
+                    <a class="btnClose" onclick="closeModal()">X</a>
+                    <h3 class="title">Forma de pagamento</h3>
+                    <div class="tipo-pagamento">
+                        <article class="pix">
+                            <img class="logo -pix" src="assets/img/carousel-galeria/pix-banco-central-seeklogo.png"
+                                alt="logo pix">
+                            <div class="pix-info">
+                                <h3 class="valor-pix">R$120,00</h3>
+                                <button class="copiar-pix"
+                                    data-pix="00020126360014BR.GOV.BCB.PIX0114+55319863243045204000053039865406120.005802BR5918Esdras Alves Diniz6009SAO PAULO62140510AZAfS9NAbW63046C20">Copiar
+                                    código pix</button>
+                            </div>
+
+
+
+                        </article>
+                        <a href="https://pag.ae/7_-ZV9PCJ" target="_blank">
+                            <article class="credito">
+                                <img class="logo -credito" src="assets/img/carousel-galeria/cartao-de-credito.png"
+                                    alt="logo credito">
+                                <h3>Cartão de crédito</h3>
+                            </article>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="presente-item">
+                <img src="assets/img/carousel-galeria/seu barriga.jpg" alt="" style="object-position: 0 -50px;">
+                <h3 class="main-subtitle">Ajuda nos primeiros meses de aluguel</h3>
+                <h3 class="valor">R$800,00</h3>
+                <button>PRESENTEAR</button>
+                <div class="modal-pagamento">
+                    <a class="btnClose" onclick="closeModal()">X</a>
+                    <h3 class="title">Forma de pagamento</h3>
+                    <div class="tipo-pagamento">
+                        <article class="pix">
+                            <img class="logo -pix" src="assets/img/carousel-galeria/pix-banco-central-seeklogo.png"
+                                alt="logo pix">
+                            <div class="pix-info">
+                                <h3 class="valor-pix">R$800,00</h3>
+                                <button class="copiar-pix"
+                                    data-pix="00020126360014BR.GOV.BCB.PIX0114+55319863243045204000053039865406800.005802BR5918Esdras Alves Diniz6009SAO PAULO62140510ctImuzxuzD6304D1C9">Copiar
+                                    código pix</button>
+                            </div>
+
+
+
+                        </article>
+                        <a href="https://pag.ae/7_-ZVxFQr" target="_blank">
+                            <article class="credito">
+                                <img class="logo -credito" src="assets/img/carousel-galeria/cartao-de-credito.png"
+                                    alt="logo credito">
+                                <h3>Cartão de crédito</h3>
+                            </article>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="presente-item">
+                <img src="assets/img/carousel-galeria/robo aspirador.jpg" alt="" style="object-position: 0 -26px;">
+                <h3 class="main-subtitle">Cota do robô aspirador pra evitar fadiga</h3>
+                <h3 class="valor">R$70,00</h3>
+                <button>PRESENTEAR</button>
+                <div class="modal-pagamento">
+                    <a class="btnClose" onclick="closeModal()">X</a>
+                    <h3 class="title">Forma de pagamento</h3>
+                    <div class="tipo-pagamento">
+                        <article class="pix">
+                            <img class="logo -pix" src="assets/img/carousel-galeria/pix-banco-central-seeklogo.png"
+                                alt="logo pix">
+                            <div class="pix-info">
+                                <h3 class="valor-pix">R$70,00</h3>
+                                <button class="copiar-pix"
+                                    data-pix="00020126360014BR.GOV.BCB.PIX0114+5531986324304520400005303986540570.005802BR5918Esdras Alves Diniz6009SAO PAULO621405100Z1WZwdMMU630437A5">Copiar
+                                    código pix</button>
+                            </div>
+
+
+
+                        </article>
+                        <a href="https://pag.ae/7_-ZVUPEv" target="_blank">
+                            <article class="credito">
+                                <img class="logo -credito" src="assets/img/carousel-galeria/cartao-de-credito.png"
+                                    alt="logo credito">
+                                <h3>Cartão de crédito</h3>
+                            </article>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="presente-item">
+                <img src="assets/img/carousel-galeria/netflix.jpg" alt="">
+                <h3 class="main-subtitle">Vale Netflix pro casal</h3>
+                <h3 class="valor">R$24,90</h3>
+                <button>PRESENTEAR</button>
+                <div class="modal-pagamento">
+                    <a class="btnClose" onclick="closeModal()">X</a>
+                    <h3 class="title">Forma de pagamento</h3>
+                    <div class="tipo-pagamento">
+                        <article class="pix">
+                            <img class="logo -pix" src="assets/img/carousel-galeria/pix-banco-central-seeklogo.png"
+                                alt="logo pix">
+                            <div class="pix-info">
+                                <h3 class="valor-pix">R$24,90</h3>
+                                <button class="copiar-pix"
+                                    data-pix="00020126360014BR.GOV.BCB.PIX0114+5531986324304520400005303986540524.905802BR5918Esdras Alves Diniz6009SAO PAULO62140510Z6SmnHpblD6304CC9D">Copiar
+                                    código pix</button>
+                            </div>
+
+
+
+                        </article>
+                        <a href="https://pag.ae/7_-ZWb-r3" target="_blank">
+                            <article class="credito">
+                                <img class="logo -credito" src="assets/img/carousel-galeria/cartao-de-credito.png"
+                                    alt="logo credito">
+                                <h3>Cartão de crédito</h3>
+                            </article>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="presente-item">
+                <img src="assets/img/carousel-galeria/geladeira.jpg" alt="" style="object-fit: contain">
+                <h3 class="main-subtitle">Patrocine a geladeira do casal</h3>
+                <h3 class="valor">R$450,00</h3>
+                <button>PRESENTEAR</button>
+                <div class="modal-pagamento">
+                    <a class="btnClose" onclick="closeModal()">X</a>
+                    <h3 class="title">Forma de pagamento</h3>
+                    <div class="tipo-pagamento">
+                        <article class="pix">
+                            <img class="logo -pix" src="assets/img/carousel-galeria/pix-banco-central-seeklogo.png"
+                                alt="logo pix">
+                            <div class="pix-info">
+                                <h3 class="valor-pix">R$450,00</h3>
+                                <button class="copiar-pix"
+                                    data-pix="00020126360014BR.GOV.BCB.PIX0114+55319863243045204000053039865406450.005802BR5918Esdras Alves Diniz6009SAO PAULO62140510CNST7HyBHs63047E08">Copiar
+                                    código pix</button>
+                            </div>
+
+
+
+                        </article>
+                        <a href="https://pag.ae/7_-ZWyf13" target="_blank">
+                            <article class="credito">
+                                <img class="logo -credito" src="assets/img/carousel-galeria/cartao-de-credito.png"
+                                    alt="logo credito">
+                                <h3>Cartão de crédito</h3>
+                            </article>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="presente-item">
+                <img src="assets/img/carousel-galeria/churras.jpg" alt="">
+                <h3 class="main-subtitle">Kit churrasco</h3>
+                <h3 class="valor">R$150,00</h3>
+                <button>PRESENTEAR</button>
+                <div class="modal-pagamento">
+                    <a class="btnClose" onclick="closeModal()">X</a>
+                    <h3 class="title">Forma de pagamento</h3>
+                    <div class="tipo-pagamento">
+                        <article class="pix">
+                            <img class="logo -pix" src="assets/img/carousel-galeria/pix-banco-central-seeklogo.png"
+                                alt="logo pix">
+                            <div class="pix-info">
+                                <h3 class="valor-pix">R$150,00</h3>
+                                <button class="copiar-pix"
+                                    data-pix="00020126360014BR.GOV.BCB.PIX0114+55319863243045204000053039865406150.005802BR5918Esdras Alves Diniz6009SAO PAULO62140510x9veRhdaIh63040195">Copiar
+                                    código pix</button>
+                            </div>
+
+
+
+                        </article>
+                        <a href="https://pag.ae/7_-ZWPezq" target="_blank">
+                            <article class="credito">
+                                <img class="logo -credito" src="assets/img/carousel-galeria/cartao-de-credito.png"
+                                    alt="logo credito">
+                                <h3>Cartão de crédito</h3>
+                            </article>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="presente-item">
+                <img src="assets/img/carousel-galeria/sofa.jpeg" alt="">
+                <h3 class="main-subtitle">Patrocine o sofá retrátil do casal!</h3>
+                <h3 class="valor">R$160,00</h3>
+                <button>PRESENTEAR</button>
+                <div class="modal-pagamento">
+                    <a class="btnClose" onclick="closeModal()">X</a>
+                    <h3 class="title">Forma de pagamento</h3>
+                    <div class="tipo-pagamento">
+                        <article class="pix">
+                            <img class="logo -pix" src="assets/img/carousel-galeria/pix-banco-central-seeklogo.png"
+                                alt="logo pix">
+                            <div class="pix-info">
+                                <h3 class="valor-pix">R$160,00</h3>
+                                <button class="copiar-pix"
+                                    data-pix="00020126360014BR.GOV.BCB.PIX0114+55319863243045204000053039865406160.005802BR5918Esdras Alves Diniz6009SAO PAULO621405109f9SU0lAd3630498FC">Copiar
+                                    código pix</button>
+                            </div>
+
+
+
+                        </article>
+                        <a href="https://pag.ae/7_-ZXc61a" target="_blank">
+                            <article class="credito">
+                                <img class="logo -credito" src="assets/img/carousel-galeria/cartao-de-credito.png"
+                                    alt="logo credito">
+                                <h3>Cartão de crédito</h3>
+                            </article>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="presente-item">
+                <img src="assets/img/carousel-galeria/mesa.jpg" alt="">
+                <h3 class="main-subtitle">Vai ter mesa posta! A noiva fez o curso com a Duda</h3>
+                <h3 class="valor">R$200,00</h3>
+                <button>PRESENTEAR</button>
+                <div class="modal-pagamento">
+                    <a class="btnClose" onclick="closeModal()">X</a>
+                    <h3 class="title">Forma de pagamento</h3>
+                    <div class="tipo-pagamento">
+                        <article class="pix">
+                            <img class="logo -pix" src="assets/img/carousel-galeria/pix-banco-central-seeklogo.png"
+                                alt="logo pix">
+                            <div class="pix-info">
+                                <h3 class="valor-pix">R$200,00</h3>
+                                <button class="copiar-pix"
+                                    data-pix="00020126360014BR.GOV.BCB.PIX0114+55319863243045204000053039865406200.005802BR5918Esdras Alves Diniz6009SAO PAULO62140510sWTnTpHt8m6304593C">Copiar
+                                    código pix</button>
+                            </div>
+
+
+
+                        </article>
+                        <a href="https://pag.ae/7_-ZXybba" target="_blank">
+                            <article class="credito">
+                                <img class="logo -credito" src="assets/img/carousel-galeria/cartao-de-credito.png"
+                                    alt="logo credito">
+                                <h3>Cartão de crédito</h3>
+                            </article>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <h2 class="main-subtitle list-title">Para os Noivos</h2>
+        <div class="wrap-presentes">
+            <article class="presente-item">
+                <img src="assets/img/carousel-galeria/corte de cabelo.jpg" alt="">
+                <h3 class="main-subtitle">1 ano de corte pro noivo</h3>
+                <h3 class="valor">R$50,00</h3>
+                <button>PRESENTEAR</button>
+                <div class="modal-pagamento">
+                    <a class="btnClose" onclick="closeModal()">X</a>
+                    <h3 class="title">Forma de pagamento</h3>
+                    <div class="tipo-pagamento">
+                        <article class="pix">
+                            <img class="logo -pix" src="assets/img/carousel-galeria/pix-banco-central-seeklogo.png"
+                                alt="logo pix">
+                            <div class="pix-info">
+                                <h3 class="valor-pix">R$50,00</h3>
+                                <button class="copiar-pix"
+                                    data-pix="00020126360014BR.GOV.BCB.PIX0114+5531986324304520400005303986540550.005802BR5918Esdras Alves Diniz6009SAO PAULO62140510s9z0ikVyV863041224">Copiar
+                                    código pix</button>
+                            </div>
+
+
+
+                        </article>
+                        <a href="https://pag.ae/7_-ZXTSw3" target="_blank">
+                            <article class="credito">
+                                <img class="logo -credito" src="assets/img/carousel-galeria/cartao-de-credito.png"
+                                    alt="logo credito">
+                                <h3>Cartão de crédito</h3>
+                            </article>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="presente-item">
+                <img src="assets/img/carousel-galeria/aviaozinho.jpg" alt="">
+                <h3 class="main-subtitle">Aviãozinho</h3>
+                <h3 class="valor">R$100,00</h3>
+                <button>PRESENTEAR</button>
+                <div class="modal-pagamento">
+                    <a class="btnClose" onclick="closeModal()">X</a>
+                    <h3 class="title">Forma de pagamento</h3>
+                    <div class="tipo-pagamento">
+                        <article class="pix">
+                            <img class="logo -pix" src="assets/img/carousel-galeria/pix-banco-central-seeklogo.png"
+                                alt="logo pix">
+                            <div class="pix-info">
+                                <h3 class="valor-pix">R$100,00</h3>
+                                <button class="copiar-pix"
+                                    data-pix="00020126360014BR.GOV.BCB.PIX0114+55319863243045204000053039865406100.005802BR5918Esdras Alves Diniz6009SAO PAULO62140510WxYjQ8F2Mb630404E3">Copiar
+                                    código pix</button>
+                            </div>
+
+
+
+                        </article>
+                        <a href="https://pag.ae/7_-ZY8ACJ" target="_blank">
+                            <article class="credito">
+                                <img class="logo -credito" src="assets/img/carousel-galeria/cartao-de-credito.png"
+                                    alt="logo credito">
+                                <h3>Cartão de crédito</h3>
+                            </article>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="presente-item">
+                <img src="assets/img/carousel-galeria/minha mulher sabe.webp" alt="">
+                <h3 class="main-subtitle">Pro noivo não esquecer disso:</h3>
+                <h3 class="valor">R$60,00</h3>
+                <button>PRESENTEAR</button>
+                <div class="modal-pagamento">
+                    <a class="btnClose" onclick="closeModal()">X</a>
+                    <h3 class="title">Forma de pagamento</h3>
+                    <div class="tipo-pagamento">
+                        <article class="pix">
+                            <img class="logo -pix" src="assets/img/carousel-galeria/pix-banco-central-seeklogo.png"
+                                alt="logo pix">
+                            <div class="pix-info">
+                                <h3 class="valor-pix">R$60,00</h3>
+                                <button class="copiar-pix"
+                                    data-pix="00020126360014BR.GOV.BCB.PIX0114+5531986324304520400005303986540560.005802BR5918Esdras Alves Diniz6009SAO PAULO62140510y9oHuiWvwb63043BF8">Copiar
+                                    código pix</button>
+                            </div>
+
+
+
+                        </article>
+                        <a href="https://pag.ae/7_-ZYEkX6" target="_blank">
+                            <article class="credito">
+                                <img class="logo -credito" src="assets/img/carousel-galeria/cartao-de-credito.png"
+                                    alt="logo credito">
+                                <h3>Cartão de crédito</h3>
+                            </article>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="presente-item">
+                <img src="assets/img/carousel-galeria/era normal ate virar noiva.jpg" alt="">
+                <h3 class="main-subtitle">6 meses de terapia pra noiva</h3>
+                <h3 class="valor">R$120,00</h3>
+                <button>PRESENTEAR</button>
+                <div class="modal-pagamento">
+                    <a class="btnClose" onclick="closeModal()">X</a>
+                    <h3 class="title">Forma de pagamento</h3>
+                    <div class="tipo-pagamento">
+                        <article class="pix">
+                            <img class="logo -pix" src="assets/img/carousel-galeria/pix-banco-central-seeklogo.png"
+                                alt="logo pix">
+                            <div class="pix-info">
+                                <h3 class="valor-pix">R$120,00</h3>
+                                <button class="copiar-pix"
+                                    data-pix="00020126360014BR.GOV.BCB.PIX0114+55319863243045204000053039865406120.005802BR5918Esdras Alves Diniz6009SAO PAULO62140510YXxHzreGWH630435FA">Copiar
+                                    código pix</button>
+                            </div>
+
+
+
+                        </article>
+                        <a href="https://pag.ae/7_-ZYUHw5" target="_blank">
+                            <article class="credito">
+                                <img class="logo -credito" src="assets/img/carousel-galeria/cartao-de-credito.png"
+                                    alt="logo credito">
+                                <h3>Cartão de crédito</h3>
+                            </article>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="presente-item">
+                <img src="assets/img/carousel-galeria/sou rica.webp" alt="">
+                <h3 class="main-subtitle">Deus tocou no seu coração</h3>
+                <h3 class="valor">R$5.000,00</h3>
+                <button>PRESENTEAR</button>
+                <div class="modal-pagamento">
+                    <a class="btnClose" onclick="closeModal()">X</a>
+                    <h3 class="title">Forma de pagamento</h3>
+                    <div class="tipo-pagamento">
+                        <article class="pix">
+                            <img class="logo -pix" src="assets/img/carousel-galeria/pix-banco-central-seeklogo.png"
+                                alt="logo pix">
+                            <div class="pix-info">
+                                <h3 class="valor-pix">R$5.000,00</h3>
+                                <button class="copiar-pix"
+                                    data-pix="00020126360014BR.GOV.BCB.PIX0114+553198632430452040000530398654075000.005802BR5918Esdras Alves Diniz6009SAO PAULO6214051098O5LufYMA6304937B">Copiar
+                                    código pix</button>
+                            </div>
+
+
+
+                        </article>
+                        <a href="https://pag.ae/7_-Z-cNTL" target="_blank">
+                            <article class="credito">
+                                <img class="logo -credito" src="assets/img/carousel-galeria/cartao-de-credito.png"
+                                    alt="logo credito">
+                                <h3>Cartão de crédito</h3>
+                            </article>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="presente-item">
+                <img src="assets/img/carousel-galeria/viajar de aviao.jpeg" alt="" style="object-position: 0 -26px;">
+                <h3 class="main-subtitle">Eu vou viajar de aviãoo pelas naçõoes</h3>
+                <h3 class="valor">R$1.200,00</h3>
+                <button>PRESENTEAR</button>
+                <div class="modal-pagamento">
+                    <a class="btnClose" onclick="closeModal()">X</a>
+                    <h3 class="title">Forma de pagamento</h3>
+                    <div class="tipo-pagamento">
+                        <article class="pix">
+                            <img class="logo -pix" src="assets/img/carousel-galeria/pix-banco-central-seeklogo.png"
+                                alt="logo pix">
+                            <div class="pix-info">
+                                <h3 class="valor-pix">R$1.200,00</h3>
+                                <button class="copiar-pix"
+                                    data-pix="00020126360014BR.GOV.BCB.PIX0114+553198632430452040000530398654071200.005802BR5918Esdras Alves Diniz6009SAO PAULO62140510ADV10qCxcG63042652">Copiar
+                                    código pix</button>
+                            </div>
+
+
+
+                        </article>
+                        <a href="https://pag.ae/7_-Z-GTB6" target="_blank">
+                            <article class="credito">
+                                <img class="logo -credito" src="assets/img/carousel-galeria/cartao-de-credito.png"
+                                    alt="logo credito">
+                                <h3>Cartão de crédito</h3>
+                            </article>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="presente-item">
+                <img src="assets/img/carousel-galeria/primeiro do bolo.jpeg" alt="">
+                <h3 class="main-subtitle">Primeiro da fila pra pegar o bolo</h3>
+                <h3 class="valor">R$300,00</h3>
+                <button>COMPRAR</button>
+                <div class="modal-pagamento">
+                    <a class="btnClose" onclick="closeModal()">X</a>
+                    <h3 class="title">Forma de pagamento</h3>
+                    <div class="tipo-pagamento">
+                        <article class="pix">
+                            <img class="logo -pix" src="assets/img/carousel-galeria/pix-banco-central-seeklogo.png"
+                                alt="logo pix">
+                            <div class="pix-info">
+                                <h3 class="valor-pix">R$300,00</h3>
+                                <button class="copiar-pix"
+                                    data-pix="00020126360014BR.GOV.BCB.PIX0114+55319863243045204000053039865406300.005802BR5918Esdras Alves Diniz6009SAO PAULO62140510FnwlMnn26P6304E1FC">Copiar
+                                    código pix</button>
+                            </div>
+
+
+
+                        </article>
+                        <a href="https://pag.ae/7_-Z_35Vr" target="_blank">
+                            <article class="credito">
+                                <img class="logo -credito" src="assets/img/carousel-galeria/cartao-de-credito.png"
+                                    alt="logo credito">
+                                <h3>Cartão de crédito</h3>
+                            </article>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <script src="js/modal-pagamento.js"></script>
+
+    <div id="feedback" class="feedback-message hidden">
+        <p id="feedback-text"></p>
+        <button onclick="document.getElementById('feedback').classList.add('hidden')">Fechar</button>
+    </div>
+</body>
+
+</html>

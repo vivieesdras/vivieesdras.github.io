@@ -1,0 +1,71 @@
+.presentes {
+    padding: 0 0 2vw;
+}
+
+.presentes-capa {
+    height: 160vw;
+    background-image: url(assets/img/Story\ Azul\ e\ Rosa\ de\ Encomenda\ de\ Presente\ de\ Dia\ dos\ Namorados.jpg);
+    background-size: cover;
+    margin-bottom: -5vw;
+}
+
+.wrap-presentes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    padding: 0 2vw;
+}
+
+.presente-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2vw;
+    width: 43vw;
+    min-height: 56vw;
+    background-color: #fff9f1;
+    border-radius: 2px;
+}
+
+.presente-item h3 {
+    font-family: 'Syne';
+    font-size: 3.8vw;
+    color: rgb(85, 85, 85);
+    text-align: center;
+    margin-top: 0;
+}
+
+.presente-item .valor {
+    margin-top: 0;
+    font-size: 4.6vw;
+    color: #ff8d00;
+}
+
+.presente-item img {
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    object-position: top;
+}
+
+.presente-item button {
+    border: none;
+    border-radius: 5px;
+    background-color: #ffa500;
+    color: white;
+    font-weight: 700;
+    height: 11vw;
+    font-size: 4.2vw;
+}
+
+.list-title {
+    font-family: 'Syne';
+    font-size: 8vw;
+    height: 11vw;
+    width: 70vw;
+    margin-left: 3vw;
+    margin-bottom: 2vw;
+    padding-left: 0vw;
+    color: white;
+    border-bottom: solid 1px white;
+}
+

@@ -1,0 +1,221 @@
+@media screen and (min-width: 1500px) {
+    header .open-menu {
+        display: none;
+    }
+
+    header .main-menu .close-menu {
+        display: none;
+    }
+
+    .-cerimonia .floating-photo.-secondMobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    header {
+        justify-content: flex-end;
+        padding-right: 2vw;
+    }
+
+    .main-menu {
+        padding: 2.5vw 1vw;
+        text-shadow: none;
+    }
+
+    .main-menu {
+        position: fixed;
+        box-sizing: border-box;
+        background-color: #c8d9e6;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: 100%;
+        top: 0;
+        right: -90vw;
+        margin-right: 0;
+        padding-left: 1vw;
+        padding-top: 12vw;
+        gap: 0;
+        transition: transform 0.2s linear;
+        border-radius: 30px 0 0 0;
+        align-items: flex-start;
+    }
+
+    .main-menu .close-menu {
+        position: absolute;
+        top: 12vw;
+        right: 8vw;
+        color: rgb(100, 100, 100);
+    }
+
+    .main-menu .main-button {
+        display: flex;
+        line-height: 14vw;
+        font-size: 4vw;
+        margin-left: 6vw;
+        line-height: 14vw;
+        border-bottom: 1px solid rgb(255, 255, 250);
+        height: 19vw;
+        width: 75vw;
+    }
+
+    .main-menu .main-button {
+        color: #4d7570;
+        font-family: "Cormorant SC", serif;;
+        font-size: 20px;
+        font-weight: 700;
+        text-decoration: none;
+        margin-right: 30px;
+        line-height: 60px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+
+    .loader .main-text {
+        color: white;
+        font-size: 5vw;
+        line-height: 6vw;
+        text-align: center;
+    }
+
+    .loader .main-subtitle {
+        color: white;
+        text-align: center;
+        font-size: 10vw;
+        line-height: 10vw;
+        margin-top: 10px;
+    }
+
+    .bg-image {
+        background-image: url(../../assets/img/bg-mobile.webp);
+        background-repeat: no-repeat;
+        background-size: 170%;
+        background-position: -147px -49px;
+        height: 120vh;
+    }
+
+    .-inicio {
+        height: 120vh;
+    }
+
+    .-inicio .main-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        font-size: 19vw;
+        top: 44vw;
+    }
+
+    .-inicio .flowers-left {
+        position: absolute;
+        z-index: 0;
+        left: -430px;
+        bottom: -480px;
+        transform: rotate(30deg) scale(0.7);
+        filter: blur(3px);
+    }
+
+    .-inicio .flowers-right {
+        position: absolute;
+        z-index: 0;
+        right: -435px;
+        bottom: -470px;
+        transform: rotate(-25deg) scale(0.7) scaleX(-1);
+        filter: blur(3px);
+    }
+
+
+    .-inicio .casal-ghibli {
+        width: 110vw;
+        bottom: 0;
+    }
+
+
+    /*------------section -cerimonia--------------*/
+
+    .transitionFlowers-left {
+        top: 600px;
+        left: -270px;
+        width: 100vw;
+
+
+    }
+
+    .transitionFlowers-right {
+        top: 1000px;
+        right: -270px;
+        width: 100vw;
+
+    }
+
+    .-cerimonia {
+        padding-top: 150px;
+        height: fit-content;
+    }
+
+    .-cerimonia .main-text {
+        font-size: 18px;
+        line-height: 20px;
+        width: 95vw;
+        padding: 0;
+        text-align: center;
+    }
+
+    .-cerimonia .main-text b {
+        font-size: 34px;
+        line-height: 40px;
+        font-family: "Cormorant SC", serif;;
+    }
+
+    .-cerimonia .main-text i {
+        font-size: 18px;
+    }
+
+    .-cerimonia .main-text .-date {
+        font-size: 33vw;
+        line-height: 28vw;
+        font-weight: 100;
+        margin-bottom: 10vw;
+    }
+
+    .-cerimonia .floating-photo.-first {
+        left: 5vw;
+        bottom: 104px;
+        top: auto;
+        width: 44vw;
+    }
+
+    .-cerimonia .floating-photo.-second {
+        display: none;
+    }
+
+    .-cerimonia .floating-photo.-secondMobile {
+        right: 1vw;
+        bottom: 10px;
+        width: 53vw;
+        z-index: 2;
+    }
+
+    .-cerimonia .floating-photo.-third {
+        left: 15vw;
+        bottom: -170px;
+        width: 80vw;
+        z-index: 1;
+        background-position: -190px -271px;
+    }
+}
+
+    .carousel {
+        transition: all 0s linear;
+    }
+
+    .service-card {
+        flex: 0 0 auto;
+        /* Garante que cada card mantenha seu tamanho */
+        width: 70vw;
+        height: 90vw;
+        /* Ajuste conforme o tamanho desejado */
+      }
