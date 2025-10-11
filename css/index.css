@@ -37,9 +37,12 @@ header {
 
 .presente-link .main-subtitle {
     font-size: 15vw;
-
+    
 }
 
-.presente-link img {
-    width: 40vw;
+.presente-link .listadepresentes {
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
