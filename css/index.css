@@ -35,7 +35,7 @@ header {
     text-align: center;
 }
 
-.presente-link h2 title {
+.presente-link .main-subtitle.-title {
     font-size: 9vw;
     font-family: "Cormorant SC", serif;
 }
