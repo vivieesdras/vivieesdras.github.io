@@ -32,4 +32,14 @@ header {
 .presente-link {
     background-color: bisque;
     height: 50vh;
+    text-align: center;
+}
+
+.presente-link .main-subtitle {
+    font-size: 15vw;
+
+}
+
+.presente-link img {
+    width: 40vw;
 }
