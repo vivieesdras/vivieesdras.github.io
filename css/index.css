@@ -30,14 +30,14 @@ header {
 }
 
 .presente-link {
-    background-color: bisque;
+    background-color: rgb(118, 75, 22);
     height: 50vh;
     text-align: center;
 }
 
 .presente-link h2 {
     font-size: 15vw;
-
+    color: aqua;
 }
 
 .presente-link .listadepresentes {
