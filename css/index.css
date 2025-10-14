@@ -72,12 +72,12 @@ header {
     right: 6vw;
 }
 
-.faq-button svg {
+.faq-button img {
     height: 1.5em;
     fill: white;
 }
 
-.faq-button:hover svg {
+.faq-button:hover img {
     animation: jello-vertical 0.7s both;
 }
 
