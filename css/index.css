@@ -66,8 +66,8 @@ header {
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.151);
     position: fixed;
     z-index: 999999999;
-    bottom: 20vw;
-    right: 6vw;
+    bottom: 30vw;
+    right: 7vw;
 }
 
 .faq-button img {
