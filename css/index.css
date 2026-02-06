@@ -110,8 +110,8 @@ header {
 
 .tooltip {
     position: absolute;
-    bottom: -38px;
-    right: -23px;
+    bottom: -39px;
+    right: -16px;
     background-color: #69a7ff;
     background-image: linear-gradient(147deg, #3897f0 0%, #3897f0 74%);
     color: white;
