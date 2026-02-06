@@ -120,7 +120,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition-duration: 0.2s;
     pointer-events: none;
     letter-spacing: 0.5px;
     font-size: 2.7vw;
@@ -135,12 +134,5 @@ header {
     background-size: 1000%;
     background-position: center;
     transform: rotate(45deg);
-    top: -15%;
-    transition-duration: 0.3s;
-}
-
-.faq-button:hover .tooltip {
-    top: -40px;
-    opacity: 1;
-    transition-duration: 0.3s;
+    top: -10%;
 }
