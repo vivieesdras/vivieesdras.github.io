@@ -11,10 +11,6 @@
         display: none;
     }
 
-    body {
-        display: none;
-    }
-
     body::before {
         content: "Para uma melhor experiência acesse pelo smartphone";
         width: 100vw;
