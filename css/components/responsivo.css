@@ -1,4 +1,4 @@
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1000px) {
     header .open-menu {
         display: none;
     }
@@ -11,14 +11,21 @@
         display: none;
     }
 
+    body {
+        display: none;
+    }
+
     body::before {
-        content: "Para uma melhor experiêbcia acesse pelo smartphone";
+        content: "Para uma melhor experiência acesse pelo smartphone";
         width: 100vw;
         height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: fixed;
         z-index: 9999999999;
         background-color: antiquewhite;
-        font-size: 5vw;
+        font-size: 3vw;
         text-align: center;
         line-height: 10vw;
     }
