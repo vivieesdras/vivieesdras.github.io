@@ -10,6 +10,18 @@
     .-cerimonia .floating-photo.-secondMobile {
         display: none;
     }
+
+    header::before {
+        content: "Para uma melhor experiêbcia acesse pelo smartphone";
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        z-index: 9999999999;
+        background-color: antiquewhite;
+        font-size: 5vw;
+        text-align: center;
+        line-height: 10vw;
+    }
 }
 
 @media screen and (max-width: 1500px) {
