@@ -11,7 +11,7 @@
         display: none;
     }
 
-    header::before {
+    body::before {
         content: "Para uma melhor experiêbcia acesse pelo smartphone";
         width: 100vw;
         height: 100vh;
