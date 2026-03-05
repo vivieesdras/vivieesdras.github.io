@@ -212,7 +212,7 @@
 }
 
 #msg {
-    min-height: 315px;
+    min-height: 200px;
     resize: vertical;
 }
 
@@ -236,5 +236,5 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 47vh;
+    height: 32vh;
 }
