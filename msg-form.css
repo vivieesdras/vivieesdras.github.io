@@ -211,7 +211,7 @@
 }
 
 #msg {
-    min-height: 150px;
+    min-height: 315px;
     resize: vertical;
 }
 
@@ -228,4 +228,11 @@
 .titulo{
     font-size: 32px;
     margin-top: 80px;
+}
+
+.participante {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 47vh;
 }
