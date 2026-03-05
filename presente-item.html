@@ -30,6 +30,76 @@
     margin-bottom: 0px;
     background-color: #9fc089;
 ">
+    
+        <form id="main-form" action="" method="post" class="confirmation">
+                    <a class="btnClose" onclick="closeModal()">X</a>
+                    <div class="title">Faltam 50 dias para o casamento!</div>
+                    <div class="subtitle">Adoraríamos receber uma mensagem sua nesse momento tão especial</div>
+                    <div class="participante">
+                        <div class="input-container ic1">
+                            <input placeholder=" " type="text" class="input" name="nome" id="name" required>
+                            <div class="cut"></div>
+                            <label class="iLabel" for="name">Sua Mensagem</label>
+                        </div>
+                        <div class="input-container ic1">
+                            <input placeholder=" " type="text" class="input" name="nome" id="name" required>
+                            <div class="cut"></div>
+                            <label class="iLabel" for="name">Seu nome*</label>
+                        </div>
+                    </div>
+                    <button class="btnOK" type="submit">Enviar</button>
+                </form>
+                <div id="feedback" class="feedback-message hidden">
+                    <p id="feedback-text"></p>
+                    <button onclick="closeFeedback()">Fechar</button>
+                </div>
+                <script>
+                    const btnAdd = document.getElementById("addParticipante");
+                    const form = document.getElementById("main-form");
+
+                    btnAdd.addEventListener("click", function () {
+                        // Seleciona o primeiro bloco de participante
+                        const participante = document.querySelector(".participante");
+
+                        // Clona o bloco inteiro
+                        const clone = participante.cloneNode(true);
+
+                        // Limpa os valores dos inputs clonados
+                        clone.querySelectorAll("input").forEach(input => input.value = "");
+
+                        // Insere o clone antes do botão de adicionar
+                        form.insertBefore(clone, btnAdd);
+                    });
+                </script>
+                <script>
+                    // Inicializa o EmailJS com a Public Key
+                    emailjs.init("kXD1_fUsp0saMMSPh"); // Substitua pela sua Public Key do EmailJS
+
+                    function showFeedback(message) {
+                        const box = document.getElementById("feedback");
+                        document.getElementById("feedback-text").textContent = message;
+                        box.classList.remove("hidden");
+                    }
+
+                    function closeFeedback() {
+                        document.getElementById("feedback").classList.add("hidden");
+                        document.getElementById("main-form").classList.remove("active");
+                    }
+
+                    // Adiciona evento ao formulário
+                    document.getElementById("main-form").addEventListener("submit", function (event) {
+                        event.preventDefault(); // Previne o recarregamento da página
+
+                        // Envia o e-mail usando EmailJS
+                        emailjs.sendForm("vivieesdras", "confirmationforms", this)
+                            .then(function () {
+                                showFeedback("Presença confirmada com sucesso!");
+                            }, function (error) {
+                                alert("Erro ao enviar a mensagem: " + error.text);
+                            });
+                    });
+                </script>
+
     <section class="presentes">
         <div class="presentes-capa">
         </div>
