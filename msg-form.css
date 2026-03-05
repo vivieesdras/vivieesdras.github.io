@@ -209,3 +209,8 @@
   cursor: pointer;
   margin-top: 15px;
 }
+
+#msg {
+    min-height: 150px;
+    resize: vertical;
+}
