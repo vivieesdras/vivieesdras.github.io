@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="modal-pagamento.css">
     <link rel="stylesheet" href="/css/components/main-text.css">
     <link rel="stylesheet" href="feedback-presente.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Great+Vibes&family=Syne:wght@400..800&display=swap"
@@ -31,77 +31,104 @@
     margin-bottom: 0px;
     background-color: #9fc089;
 ">
-  
+
 
     <section class="presentes">
         <form id="msg-form" action="" method="post" class="msg-form">
-                    <a class="btnClose" onclick="closeModal()">X</a>
-                    <div class="title">Faltam 50 dias para o casamento!</div>
-                    <div class="subtitle">Adoraríamos receber uma mensagem sua nesse momento tão especial</div>
-                    <div class="participante">
-                        <div class="input-container ic1">
-                            <textarea placeholder=" " class="input" name="msg" id="msg" required></textarea>
-                            <div class="cut"></div>
-                            <label class="iLabel" for="name">Sua Mensagem</label>
-                        </div>
-                        <div class="input-container ic1">
-                            <input placeholder=" " type="text" class="input" name="nome" id="name" required>
-                            <div class="cut"></div>
-                            <label class="iLabel" for="name">Seu nome*</label>
-                        </div>
-                    </div>
-                    <button class="btnOK" type="submit">Enviar</button>
-                </form>
-                <div id="feedback" class="feedback-message hidden">
-                    <p id="feedback-text"></p>
-                    <button onclick="closeFeedback()">Fechar</button>
+            <a class="btnClose" onclick="closeModal()">X</a>
+            <div class="title">Faltam 50 dias para o casamento!</div>
+            <div id="contador"></div>
+
+            <script>
+
+                const dataCasamento = new Date("2026-12-20T16:00:00").getTime();
+
+                const contador = setInterval(function () {
+
+                    const agora = new Date().getTime();
+                    const distancia = dataCasamento - agora;
+
+                    const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+                    const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+                    const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+                    document.getElementById("contador").innerHTML =
+                        dias + "d " + horas + "h " + minutos + "m " + segundos + "s ";
+
+                    if (distancia < 0) {
+                        clearInterval(contador);
+                        document.getElementById("contador").innerHTML = "Chegou o grande dia! ❤️";
+                    }
+
+                }, 1000);
+
+            </script>
+            <div class="subtitle">Adoraríamos receber uma mensagem sua nesse momento tão especial</div>
+            <div class="participante">
+                <div class="input-container ic1">
+                    <textarea placeholder=" " class="input" name="msg" id="msg" required></textarea>
+                    <div class="cut"></div>
+                    <label class="iLabel" for="name">Sua Mensagem</label>
                 </div>
-                <script>
-                    const btnAdd = document.getElementById("addParticipante");
-                    const form = document.getElementById("main-form");
+                <div class="input-container ic1">
+                    <input placeholder=" " type="text" class="input" name="nome" id="name" required>
+                    <div class="cut"></div>
+                    <label class="iLabel" for="name">Seu nome*</label>
+                </div>
+            </div>
+            <button class="btnOK" type="submit">Enviar</button>
+        </form>
+        <div id="feedback" class="feedback-message hidden">
+            <p id="feedback-text"></p>
+            <button onclick="closeFeedback()">Fechar</button>
+        </div>
+        <script>
+            const btnAdd = document.getElementById("addParticipante");
+            const form = document.getElementById("main-form");
 
-                    btnAdd.addEventListener("click", function () {
-                        // Seleciona o primeiro bloco de participante
-                        const participante = document.querySelector(".participante");
+            btnAdd.addEventListener("click", function () {
+                // Seleciona o primeiro bloco de participante
+                const participante = document.querySelector(".participante");
 
-                        // Clona o bloco inteiro
-                        const clone = participante.cloneNode(true);
+                // Clona o bloco inteiro
+                const clone = participante.cloneNode(true);
 
-                        // Limpa os valores dos inputs clonados
-                        clone.querySelectorAll("input").forEach(input => input.value = "");
+                // Limpa os valores dos inputs clonados
+                clone.querySelectorAll("input").forEach(input => input.value = "");
 
-                        // Insere o clone antes do botão de adicionar
-                        form.insertBefore(clone, btnAdd);
+                // Insere o clone antes do botão de adicionar
+                form.insertBefore(clone, btnAdd);
+            });
+        </script>
+        <script>
+            // Inicializa o EmailJS com a Public Key
+            emailjs.init("kXD1_fUsp0saMMSPh"); // Substitua pela sua Public Key do EmailJS
+
+            function showFeedback(message) {
+                const box = document.getElementById("feedback");
+                document.getElementById("feedback-text").textContent = message;
+                box.classList.remove("hidden");
+            }
+
+            function closeFeedback() {
+                document.getElementById("feedback").classList.add("hidden");
+                document.getElementById("main-form").classList.remove("active");
+            }
+
+            // Adiciona evento ao formulário
+            document.getElementById("main-form").addEventListener("submit", function (event) {
+                event.preventDefault(); // Previne o recarregamento da página
+
+                // Envia o e-mail usando EmailJS
+                emailjs.sendForm("vivieesdras", "confirmationforms", this)
+                    .then(function () {
+                        showFeedback("Presença confirmada com sucesso!");
+                    }, function (error) {
+                        alert("Erro ao enviar a mensagem: " + error.text);
                     });
-                </script>
-                <script>
-                    // Inicializa o EmailJS com a Public Key
-                    emailjs.init("kXD1_fUsp0saMMSPh"); // Substitua pela sua Public Key do EmailJS
-
-                    function showFeedback(message) {
-                        const box = document.getElementById("feedback");
-                        document.getElementById("feedback-text").textContent = message;
-                        box.classList.remove("hidden");
-                    }
-
-                    function closeFeedback() {
-                        document.getElementById("feedback").classList.add("hidden");
-                        document.getElementById("main-form").classList.remove("active");
-                    }
-
-                    // Adiciona evento ao formulário
-                    document.getElementById("main-form").addEventListener("submit", function (event) {
-                        event.preventDefault(); // Previne o recarregamento da página
-
-                        // Envia o e-mail usando EmailJS
-                        emailjs.sendForm("vivieesdras", "confirmationforms", this)
-                            .then(function () {
-                                showFeedback("Presença confirmada com sucesso!");
-                            }, function (error) {
-                                alert("Erro ao enviar a mensagem: " + error.text);
-                            });
-                    });
-                </script>
+            });
+        </script>
 
         <div class="presentes-capa">
         </div>
@@ -236,7 +263,7 @@
                     </div>
                 </div>
             </article>
-                        <article class="presente-item">
+            <article class="presente-item">
                 <img src="assets/img/carousel-galeria/travesseiros.jpg" alt="">
                 <h3 class="main-subtitle">Kit Travesseiro</h3>
                 <h3 class="valor">R$180,00</h3>
@@ -268,7 +295,7 @@
                     </div>
                 </div>
             </article>
-                        <article class="presente-item">
+            <article class="presente-item">
                 <img src="assets/img/carousel-galeria/edredom (2).jpg" alt="">
                 <h3 class="main-subtitle">Edredom</h3>
                 <h3 class="valor">R$299,90</h3>
@@ -332,7 +359,7 @@
                     </div>
                 </div>
             </article>
-                        <article class="presente-item">
+            <article class="presente-item">
                 <img src="assets/img/carousel-galeria/roupa de cama.jpg" style="object-position: center;" alt="">
                 <h3 class="main-subtitle">Cobre Leito</h3>
                 <h3 class="valor">R$299,00</h3>
@@ -396,7 +423,7 @@
                     </div>
                 </div>
             </article>
-                        <article class="presente-item">
+            <article class="presente-item">
                 <img src="assets/img/carousel-galeria/sofa modulado.jpg" style="object-position: center;" alt="">
                 <h3 class="main-subtitle">Sofá modulado</h3>
                 <h3 class="valor">R$4090,00</h3>
@@ -429,7 +456,8 @@
                 </div>
             </article>
             <article class="presente-item">
-                <img src="assets/img/carousel-galeria/grill.webp" alt="" style="object-fit: cover; object-position: center;">
+                <img src="assets/img/carousel-galeria/grill.webp" alt=""
+                    style="object-fit: cover; object-position: center;">
                 <h3 class="main-subtitle">Grill Elétrico</h3>
                 <h3 class="valor">R$270,00</h3>
                 <button>PRESENTEAR</button>
@@ -492,7 +520,7 @@
                     </div>
                 </div>
             </article>
-                        <article class="presente-item">
+            <article class="presente-item">
                 <img src="assets/img/carousel-galeria/cama.jpg" alt="">
                 <h3 class="main-subtitle">Cama</h3>
                 <h3 class="valor">R$3999,00</h3>
@@ -588,7 +616,7 @@
                     </div>
                 </div>
             </article>
-                        <article class="presente-item">
+            <article class="presente-item">
                 <img src="assets/img/carousel-galeria/panela-eletrica-mondial-pe38-5-l-timer-152009041840.webp" alt="">
                 <h3 class="main-subtitle">Panela de pressão elétrica</h3>
                 <h3 class="valor">R$580,00</h3>
