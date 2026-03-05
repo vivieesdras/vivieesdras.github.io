@@ -36,7 +36,7 @@
     <section class="presentes">
         <form id="msg-form" action="" method="post" class="msg-form">
             <a class="btnClose" onclick="closeModal()">X</a>
-            <div class="title">Faltam 50 dias para o casamento!</div>
+            <div class="title -msg">Faltam</div>
             <div id="contador"></div>
 
             <script>
@@ -51,7 +51,7 @@
                     const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
 
                     document.getElementById("contador").innerHTML =
-                        dias + "d ";
+                        dias + "dias ";
 
                     if (distancia < 0) {
                         clearInterval(contador);
@@ -61,6 +61,7 @@
                 }, 1000);
 
             </script>
+            <div class="title -msg">para o casamento!!</div>
             <div class="subtitle">Adoraríamos receber uma mensagem sua nesse momento tão especial</div>
             <div class="participante">
                 <div class="input-container ic1">
