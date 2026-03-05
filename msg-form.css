@@ -214,3 +214,14 @@
     min-height: 150px;
     resize: vertical;
 }
+
+#contador{
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.titulo{
+    font-size: 32px;
+    margin-top: 80px;
+}
