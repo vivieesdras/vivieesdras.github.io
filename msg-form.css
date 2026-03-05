@@ -212,7 +212,7 @@
 }
 
 #msg {
-    min-height: 180px;
+    min-height: 20vh;
     resize: vertical;
 }
 
