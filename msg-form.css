@@ -1,6 +1,7 @@
 .msg-form {
     text-align: center;
-    background-color: #c8d9e6;
+    background-color: #c8d9e6ba;
+    backdrop-filter: blur(10px);
     border-radius: 20px;
     box-sizing: border-box;
     padding: 20px;
@@ -54,7 +55,7 @@
 }
 
 .msg-form .subtitle {
-  color: rgb(104, 101, 101);
+  color: rgb(34, 32, 32);
   font-family: sans-serif;
   font-size: 4vw;
   font-weight: 600;
