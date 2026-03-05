@@ -225,6 +225,7 @@
     font-size: 15vw;
     font-weight: bold;
     margin-top: 10px;
+    color: white;
 }
 
 .titulo{
@@ -237,4 +238,5 @@
     flex-direction: column;
     justify-content: space-between;
     height: 32vh;
+
 }
