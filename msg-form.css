@@ -1,20 +1,15 @@
-.div-msg-form {
-    width: 100vw;
-   
-}
-
 .msg-form {
-  background-color: #c8d9e6;
-  border-radius: 20px;
-  box-sizing: border-box;
-  padding: 20px;
-  width: 93vw;
-  height: 95vw;
-  position: fixed;
-  z-index: 999;
-  top: 100px;
-  display: none;
-  overflow-y: auto
+    text-align: center;
+    background-color: #c8d9e6;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    width: 100vw;
+    height: 90vh;
+    position: fixed;
+    z-index: 999;
+    top: 5vh;
+    overflow-y: auto;
 }
 
 .active {
