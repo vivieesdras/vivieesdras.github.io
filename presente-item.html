@@ -83,7 +83,7 @@
         </div>
         <script>
             const btnAdd = document.getElementById("addParticipante");
-            const form = document.getElementById("main-form");
+            const form = document.getElementById("msg-form");
 
             btnAdd.addEventListener("click", function () {
                 // Seleciona o primeiro bloco de participante
@@ -111,7 +111,7 @@
 
             function closeFeedback() {
                 document.getElementById("feedback").classList.add("hidden");
-                document.getElementById("main-form").classList.remove("active");
+                document.getElementById("msg-form").classList.remove("active");
             }
 
             // Adiciona evento ao formulário
