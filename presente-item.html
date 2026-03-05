@@ -115,13 +115,13 @@
             }
 
             // Adiciona evento ao formulário
-            document.getElementById("main-form").addEventListener("submit", function (event) {
+            document.getElementById("msg-form").addEventListener("submit", function (event) {
                 event.preventDefault(); // Previne o recarregamento da página
 
                 // Envia o e-mail usando EmailJS
-                emailjs.sendForm("vivieesdras", "confirmationforms", this)
+                emailjs.sendForm("vivieesdras", "msgforms", this)
                     .then(function () {
-                        showFeedback("Presença confirmada com sucesso!");
+                        showFeedback("Mensagem enviada com sucesso!");
                     }, function (error) {
                         alert("Erro ao enviar a mensagem: " + error.text);
                     });
