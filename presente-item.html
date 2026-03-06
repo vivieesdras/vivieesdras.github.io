@@ -40,6 +40,10 @@
             <div id="contador"></div>
 
             <script>
+                function closeModal() {
+                    const modal = document.querySelector(".msg-form");
+                    modal.style.display = "none";
+                }
 
                 const dataCasamento = new Date("2026-04-25T16:00:00").getTime();
 
