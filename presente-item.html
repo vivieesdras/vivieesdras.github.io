@@ -79,7 +79,7 @@
         </form>
         <div id="feedback" class="feedback-message hidden">
             <p id="feedback-text"></p>
-            <button onclick="closeFeedback()">Fechar</button>
+            <button onclick="closeFeedback()">Ver lista de presentes</button>
         </div>
         <script>
             const btnAdd = document.getElementById("addParticipante");
@@ -111,7 +111,7 @@
 
             function closeFeedback() {
                 document.getElementById("feedback").classList.add("hidden");
-                document.getElementById("msg-form").classList.remove("active");
+                document.getElementById("msg-form").classList.add("hidden");
             }
 
             // Adiciona evento ao formulário
