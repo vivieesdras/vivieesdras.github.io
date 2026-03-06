@@ -198,8 +198,8 @@
   flex-direction: column; 
   align-items: center; 
   justify-content: flex-end; 
-  width: 79vw; 
-  height: 64vw; 
+  width: 80vw; 
+  height: 65vw; 
 }
 
 .feedback-msg.hidden {
@@ -251,36 +251,7 @@
   content: url(../../assets/img/confirm_4682678.png);
 }
 
-.feedback-msg {
-  position: fixed;
-  top: 30%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #007add;
-  color: #fff;
-  padding: 20px 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  font-size: 4vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  width: 46vw;
-  height: 30vw;
-}
-
 .feedback-msg.hidden {
   display: none;
 }
 
-.feedback-msg button {
-  background-color: #fff;
-  color: #08d;
-  border: none;
-  border-radius: 8px;
-  padding: 5px 15px;
-  cursor: pointer;
-  margin-top: 15px;
-}
