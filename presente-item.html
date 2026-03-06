@@ -77,7 +77,7 @@
             </div>
             <button class="btnOK" type="submit">Enviar</button>
         </form>
-        <div id="feedback" class="feedback-message hidden">
+        <div id="feedback" class="feedback-msg hidden">
             <p id="feedback-text"></p>
             <button onclick="closeFeedback()">Ver lista de presentes</button>
         </div>
@@ -103,9 +103,9 @@
             // Inicializa o EmailJS com a Public Key
             emailjs.init("kXD1_fUsp0saMMSPh"); // Substitua pela sua Public Key do EmailJS
 
-            function showFeedback(message) {
+            function showFeedback(msg) {
                 const box = document.getElementById("feedback");
-                document.getElementById("feedback-text").textContent = message;
+                document.getElementById("feedback-text").textContent = msg;
                 box.classList.remove("hidden");
             }
 
@@ -878,7 +878,7 @@
 
     <script src="js/modal-pagamento.js"></script>
 
-    <div id="feedback" class="feedback-message hidden">
+    <div id="feedback" class="feedback-msg hidden">
         <p id="feedback-text"></p>
         <button onclick="document.getElementById('feedback').classList.add('hidden')">Fechar</button>
     </div>

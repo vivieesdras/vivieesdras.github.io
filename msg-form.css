@@ -177,11 +177,11 @@
   background-color: #06b;
 }
 
-.feedback-message::before {
+.feedback-msg::before {
   content: url(../../assets/img/confirm_4682678.png);
 }
 
-.feedback-message {
+.feedback-msg {
   position: fixed; 
   top: 30%; 
   left: 50%; 
@@ -202,11 +202,11 @@
   height: 64vw; 
 }
 
-.feedback-message.hidden {
+.feedback-msg.hidden {
   display: none;
 }
 
-.feedback-message button {
+.feedback-msg button {
   background-color: #83b9e2;
   color: #ffffff;
   border: none;
@@ -247,11 +247,11 @@
 
 }
 
-.feedback-message::before {
+.feedback-msg::before {
   content: url(../../assets/img/confirm_4682678.png);
 }
 
-.feedback-message {
+.feedback-msg {
   position: fixed;
   top: 30%;
   left: 50%;
@@ -271,11 +271,11 @@
   height: 30vw;
 }
 
-.feedback-message.hidden {
+.feedback-msg.hidden {
   display: none;
 }
 
-.feedback-message button {
+.feedback-msg button {
   background-color: #fff;
   color: #08d;
   border: none;
