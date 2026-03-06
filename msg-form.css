@@ -17,6 +17,10 @@
     display: block;
 }
 
+.hidden {
+  display: none;
+}
+
 /*
 .active .confirmation {
     animation: modal 4s;
